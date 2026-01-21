@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+
+    <h3>Multiplication Table</h3>
+
+    <input type="text" id="num">
+    <input type="button" value="Generate Table" onclick="generateTable()">
+
+    <p id="result"></p>
+
+    <script>
+        function generateTable() {
+            var n = document.getElementById("num").value;
+            var output = "Multiplication Table for " + n + ":<br>";
+
+            for (var i = 1; i <= 10; i++) {
+                output = output + n + " x " + i + " = " + (n * i) + "<br>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
